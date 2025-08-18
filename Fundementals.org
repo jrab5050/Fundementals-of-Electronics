@@ -1,0 +1,34 @@
+#+Title: Fundamentals of Electronics
+
+* Introduction
+This a list of topics that every engineer working on electronics should know whether they are
+working on software or hardware. All of these skill transfer over to actual industry jobs only
+difference being that in the industry you will most likely find yourself working with one of these
+specific skills instead of all them as you would in a lab or startup environment.
+
+* Basic Knowledge of Electric Theory
+Learn basic stuff like Ohm's Law, Kirchoff's Current and Voltage laws and Thevian Therom. Learn
+the equations for the fundamental voltage current relationships for the fundamental components of
+electronics: resistor, capacitor and inductor. If you plan on working with motors than a brief skim
+of an electromagnatism textbook may be worth it. Learning more advance topics such as the Laplace
+transform and Fourier Series may also be useful to start early. These transforms are a fundamental
+step of how you would design a filter. Speaking about filters, learn about filters by looking up:
+low pass filter, high pass filter and band pass filter. Then you can look into 2nd order filters
+after that. Also *extremely* important is to learn how transistors work. This is an extremely
+complex and deep topic, but extremely useful for understanding the different measurements listed on
+a datasheet. It is also an important aspect of control and power electronics, so if you are ever
+interested in controlling motors, solenoids or power supplies than you need a decent grasp about
+how transistors work and semiconductor theory in general. Best place to start is to learn the I-V
+graphs of the diode and transistor. Then pick a textbook about semiconductors and skim it for 3-4
+days until you get a basic grasp of how transistors are fabricated.
+
+** Links
+| Description                    | Link                                                           | Notes             |
+|--------------------------------+----------------------------------------------------------------+-------------------|
+| Solid State Electronic Devices | https://annas-archive.org/md5/dae7d0a4e8a6cc0cb6dfecc994fd474a | Introductory text |
+| (Book)                         |                                                                | to semiconductor  |
+|                                |                                                                | theory            |
+|--------------------------------+----------------------------------------------------------------+-------------------|
+| Electric Circuits              | https://annas-archive.org/md5/03056790a74181d7794410d104eb40da | Book about basic  |
+| (Book)                         |                                                                | circuit theory    |
+|                                |                                                                |                   |

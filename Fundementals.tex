@@ -1,12 +1,40 @@
-#+Title: Fundamentals of Electronics
+% Created 2025-08-19 Tue 07:50
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\author{volo}
+\date{\today}
+\title{Fundamentals of Electronics}
+\hypersetup{
+ pdfauthor={volo},
+ pdftitle={Fundamentals of Electronics},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 30.1 (Org mode 9.7.11)}, 
+ pdflang={English}}
+\begin{document}
 
-* Introduction
+\maketitle
+\tableofcontents
+
+\section{Introduction}
+\label{sec:orgd6d825a}
 This a list of topics that every engineer working on electronics should know whether they are
 working on software or hardware. All of these skill transfer over to actual industry jobs only
 difference being that in the industry you will most likely find yourself working with one of these
 specific skills instead of all them as you would in a lab or startup environment.
-
-* Basic Knowledge of Electric Theory
+\section{Basic Knowledge of Electric Theory}
+\label{sec:org901e593}
 Learn basic stuff like Ohm's Law, Kirchoff's Current and Voltage laws and Thevian Therom. Learn
 the equations for the fundamental voltage current relationships for the fundamental components of
 electronics: resistor, capacitor and inductor. If you plan on working with motors than a brief skim
@@ -14,60 +42,65 @@ of an electromagnatism textbook may be worth it. Learning more advance topics su
 transform and Fourier Series may also be useful to start early. These transforms are a fundamental
 step of how you would design a filter. Speaking about filters, learn about filters by looking up:
 low pass filter, high pass filter and band pass filter. Then you can look into 2nd order filters
-after that. Also *extremely* important is to learn how transistors work. This is an extremely
+after that. Also \textbf{extremely} important is to learn how transistors work. This is an extremely
 complex and deep topic, but extremely useful for understanding the different measurements listed on
 a datasheet. It is also an important aspect of control and power electronics, so if you are ever
 interested in controlling motors, solenoids or power supplies than you need a decent grasp about
 how transistors work and semiconductor theory in general. Best place to start is to learn the I-V
 graphs of the diode and transistor. Then pick a textbook about semiconductors and skim it for 3-4
 days until you get a basic grasp of how transistors are fabricated.
-
-** Links
-| Description                    | Link                                                           | Notes                |
-|--------------------------------+----------------------------------------------------------------+----------------------|
-| Solid State Electronic Devices | https://annas-archive.org/md5/dae7d0a4e8a6cc0cb6dfecc994fd474a | Introductory text    |
-| (Book)                         |                                                                | to semiconductor     |
-|                                |                                                                | theory               |
-|--------------------------------+----------------------------------------------------------------+----------------------|
-| Electric Circuits              | https://annas-archive.org/md5/03056790a74181d7794410d104eb40da | Book about basic     |
-| (Book)                         |                                                                | circuit theory       |
-|                                |                                                                |                      |
-|--------------------------------+----------------------------------------------------------------+----------------------|
-| The Art of Electronics         | https://annas-archive.org/md5/ee4f14f89c6d2e0c9369194a69ab9f8a | Best book overall    |
-|                                |                                                                | gives very practical |
-|                                |                                                                | understanding of     |
-|                                |                                                                | modern electronics  |
-
-** Reading Guide for Electric Circuits
-*** Chapter 1 Circuit Variables
-Skim through most of the chapter but focus on section *1.4 Voltage and Current*,
-*1.5 The Ideal Basic Circuit Element* and *1.6 Power and Energy*.
-
-*** Chapter 2 Circuit Elements
+\subsection{Links}
+\label{sec:org199c330}
+\begin{center}
+\begin{tabular}{lll}
+Description & Link & Notes\\
+\hline
+Solid State Electronic Devices & \url{https://annas-archive.org/md5/dae7d0a4e8a6cc0cb6dfecc994fd474a} & Introductory text\\
+(Book) &  & to semiconductor\\
+ &  & theory\\
+\hline
+Electric Circuits & \url{https://annas-archive.org/md5/03056790a74181d7794410d104eb40da} & Book about basic\\
+(Book) &  & circuit theory\\
+ &  & \\
+\hline
+The Art of Electronics & \url{https://annas-archive.org/md5/ee4f14f89c6d2e0c9369194a69ab9f8a} & Best book overall\\
+ &  & gives very practical\\
+ &  & understanding of\\
+ &  & modern electronics\\
+\end{tabular}
+\end{center}
+\subsection{Reading Guide for Electric Circuits}
+\label{sec:org0f4d4c6}
+\subsubsection{Chapter 1 Circuit Variables}
+\label{sec:org6d2a141}
+Skim through most of the chapter but focus on section \textbf{1.4 Voltage and Current},
+\textbf{1.5 The Ideal Basic Circuit Element} and \textbf{1.6 Power and Energy}.
+\subsubsection{Chapter 2 Circuit Elements}
+\label{sec:org4ea9637}
 Read this whole chapter, this is very fundamental theory for understanding how circuits work. When
 they talk about Current Sources don't think of it as a component, but as something you would use
 to model a component of off. For example, if I am building a power supply rated for 2 A and I wanted
 to simulate my circuit, I would build the circuit in a simulator and then attach a 2 A current
 source to the output terminals of my power supply. This would show me my circuits behavior at 2 A.
-
-*** Chapter 3 Simple Resistive Circuits
+\subsubsection{Chapter 3 Simple Resistive Circuits}
+\label{sec:org63aa7d4}
 This is another chapter that should be read fully. Pay extra attention to section
-*3.6 Measuring Resistance-The Wheatstone Bridge*. A lot of temperature sensors are resistance based
+\textbf{3.6 Measuring Resistance-The Wheatstone Bridge}. A lot of temperature sensors are resistance based
 and to measure temperature of them we usually consent them in a Wheatstone bridge.
-
-*** Chapter 4 Techniques of Circuit Analysis
+\subsubsection{Chapter 4 Techniques of Circuit Analysis}
+\label{sec:orgf13b228}
 This chapter is not that useful give it a brief skim. Future chapters will reference some of the
 terminology within in this chapter so if you are confused later, come back to this chapter and give
 it a skim.
-
-*** Chapter 5 The Operational Amplifier
+\subsubsection{Chapter 5 The Operational Amplifier}
+\label{sec:org6c85367}
 Read this whole chapter it is extremely important. I also recommend breadboarding these circuits as
 you learn about them. It will make it much easier and faster to learn. Op Amps are used all the time
 for both control and measurement.
-
-*** Chapter 6 Inductance, Capacitance, and Mutual Inductance
+\subsubsection{Chapter 6 Inductance, Capacitance, and Mutual Inductance}
+\label{sec:org8fc087c}
 This is an important chapter, but don't get to caught up in all the calculus. Understand the basic
-results found in section *6.1 The Inductor* and *6.2 The Capacitor*. Namely that the inductor's
+results found in section \textbf{6.1 The Inductor} and \textbf{6.2 The Capacitor}. Namely that the inductor's
 voltage depends on the change in current and that capacitor's current depends on the change in
 voltage. Pay attention to equations 6.5 and 6.14.
 
@@ -79,14 +112,16 @@ voltage terms in both equations. This topic will get pretty complex so don't str
 but just know that it is used as a basis for control system algorithms for example the PID loop.
 
 This chapter is also important if you want some basic understanding of how power supplies work.
-Mainly section *6.4 Mutual Inductance*. Its a lot of math involved and if you're not really working
+Mainly section \textbf{6.4 Mutual Inductance}. Its a lot of math involved and if you're not really working
 on power supplies than it wont be to much use for you. Just know that transformers utilize mutual
 inductance to step up voltage and transformers are one of the main components of power supplies.
 Refer back to section 6.4 if you ever find yourself working on power supplies.
-
-**** Equation 6.5 Inductor i-v relation
+\begin{enumerate}
+\item Equation 6.5 Inductor i-v relation
+\label{sec:orgf465f24}
 $$i(t) = \frac{1}{L}\int^{t}_{t_0}{vd\tau} + i(t_0)$$
-
-**** Equation 6.4 Capacitor v-i relation
+\item Equation 6.4 Capacitor v-i relation
+\label{sec:org30046ba}
 $$v(t) = \frac{1}{C}\int^{t}_{t_0}{id\tau} + v(t_0)$$
-
+\end{enumerate}
+\end{document}

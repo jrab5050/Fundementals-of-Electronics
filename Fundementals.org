@@ -90,3 +90,60 @@ $$i(t) = \frac{1}{L}\int^{t}_{t_0}{vd\tau} + i(t_0)$$
 **** Equation 6.4 Capacitor v-i relation
 $$v(t) = \frac{1}{C}\int^{t}_{t_0}{id\tau} + v(t_0)$$
 
+*** Chapter 7 Response of First-Order RL and RC circuits
+This chapter is pretty useful but you don't need to spend to much time on it. RL and RC circuits are
+the basis for different filters and this chapter gives you the theory as to why they are. The most
+vital results for this chapter are the time constant derivations for both the RL and RC circuits and
+the step response. If you have access to an oscilloscope then you can build the circuit in real life
+and then see the waveforms of the RL and RC circuits.
+
+*** Chapter 8 Natural and Step Responses of RLC Circuits
+This chapter is one of the most complicated in the book. You wont often use RLC circuits unless you
+decided to work with radio communications, require heavy filtering on a specific frequency, or audio
+. If any of those topics interest you than this chapter is worth a full read otherwise just skim it.
+
+*** Chapter 9 Sinusoidal Steady-State Analysis
+The main section to focus on this chapter would be **Section 9.4 The Passive Circuit Elements in the
+Frequency Domain**. This becomes useful when your dealing with Laplace and Fourier transforms later
+on, also just gives you an idea of your circuit will react at different frequencies. Unless you goal
+is to work with power supplies and motors mainly, I would focus on Section 9.4 solely and skim the
+rest.
+
+*** Chapter 10 Sinusoidal Steady-State Power Calculations
+Most useful section her is **Section 10.3 The rms Value and Power Calculations**, everything else
+can be skimmed.
+
+*** Chapter 11 Balanced Three-Phase Circuits
+Unless you goal is to be a power electronics engineer, this chapter should be skipped.
+
+*** Chapter 12 Introduction to the Laplace Transform
+This will basically be your introduction into [[https://en.wikipedia.org/wiki/Classical_control_theory][classical control theory]]. It will seem very random and
+unrelated to whatever you are doing but it is defiantly worth spending some time. If you ever intend
+to control motors or heaters with precision this skill is the fundamental building block to do so.
+Read the whole thing and do some practice problems to check yourself.
+
+*** Chapter 13 The Laplace Transform in Circuit Analysis
+This chapter details one of the applications of the Laplace transform. Also introduces the
+convolution integral for when your working with experimental data. I wouldn't say that this chapter
+is required, but it will give you more practice doing Laplace transforms.
+
+*** Chapter 14 Introduction to Frequency Selective Circuits
+Useful chapter, takes all the circuits you seen up to this point and shows you how to analyze them
+as filters. Give it a quick read.
+
+*** Chapter 15 Active Filter Circuits
+This is were we start to reach diminishing returns. This chapter is not that useful to learn by
+itself, but if you are really interested in audio or radio I would give it a read, otherwise skim
+it.
+
+*** Chapter 16 Fourier Series
+This is an advanced topic but I would give it a read just for the purpose of understanding how to
+read and make a frequency response graph. Although you wont do Fourier Series by hand in actual
+industry you will most definitely see frequency response graphs and you may even need to implement
+a Fourier Series algorithm in software so it as least useful to know something about it.
+
+*** Chapter 17 The Fourier Transform
+If you are going to learn Chapter 16 then you should definitely learn this chapter as well.
+
+*** Chapter 18 Two-Port Circuits
+I have literally never heard or worked with this topic. Skip.

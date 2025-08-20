@@ -1,0 +1,176 @@
+
+# Introduction
+This a list of topics that every engineer working on electronics should
+know whether they are working on software or hardware. All of these
+skill transfer over to actual industry jobs only difference being that
+in the industry you will most likely find yourself working with one of
+these specific skills instead of all them as you would in a lab or
+startup environment.
+
+# Basic Knowledge of Electric Theory
+Learn basic stuff like Ohm's Law, Kirchoff's Current and Voltage laws
+and Thevian Therom. Learn the equations for the fundamental voltage
+current relationships for the fundamental components of electronics:
+resistor, capacitor and inductor. If you plan on working with motors
+than a brief skim of an electromagnatism textbook may be worth it.
+Learning more advance topics such as the Laplace transform and Fourier
+Series may also be useful to start early. These transforms are a
+fundamental step of how you would design a filter. Speaking about
+filters, learn about filters by looking up: low pass filter, high pass
+filter and band pass filter. Then you can look into 2nd order filters
+after that. Also **extremely** important is to learn how transistors
+work. This is an extremely complex and deep topic, but extremely useful
+for understanding the different measurements listed on a datasheet. It
+is also an important aspect of control and power electronics, so if you
+are ever interested in controlling motors, solenoids or power supplies
+than you need a decent grasp about how transistors work and
+semiconductor theory in general. Best place to start is to learn the I-V
+graphs of the diode and transistor. Then pick a textbook about
+semiconductors and skim it for 3-4 days until you get a basic grasp of
+how transistors are fabricated.
+
+## Links
+| Description                    | Link                                                             | Notes                |
+| ------------------------------ | ---------------------------------------------------------------- | -------------------- |
+| Solid State Electronic Devices | <https://annas-archive.org/md5/dae7d0a4e8a6cc0cb6dfecc994fd474a> | Introductory text    |
+| (Book)                         |                                                                  | to semiconductor     |
+|                                |                                                                  | theory               |
+| Electric Circuits              | <https://annas-archive.org/md5/03056790a74181d7794410d104eb40da> | Book about basic     |
+| (Book)                         |                                                                  | circuit theory       |
+|                                |                                                                  |                      |
+| The Art of Electronics         | <https://annas-archive.org/md5/ee4f14f89c6d2e0c9369194a69ab9f8a> | Best book overall    |
+|                                |                                                                  | gives very practical |
+|                                |                                                                  | understanding of     |
+|                                |                                                                  | modern electronics   |
+
+## Reading Guide for Electric Circuits
+
+### Chapter 1 Circuit Variables
+Skim through most of the chapter but focus on section **1.4 Voltage and
+Current**, **1.5 The Ideal Basic Circuit Element** and **1.6 Power and
+Energy**.
+
+### Chapter 2 Circuit Elements
+Read this whole chapter, this is very fundamental theory for
+understanding how circuits work. When they talk about Current Sources
+don't think of it as a component, but as something you would use to
+model a component of off. For example, if I am building a power supply
+rated for 2 A and I wanted to simulate my circuit, I would build the
+circuit in a simulator and then attach a 2 A current source to the
+output terminals of my power supply. This would show me my circuits
+behavior at 2 A.
+
+### Chapter 3 Simple Resistive Circuits
+This is another chapter that should be read fully. Pay extra attention
+to section **3.6 Measuring Resistance-The Wheatstone Bridge**. A lot of
+temperature sensors are resistance based and to measure temperature of
+them we usually consent them in a Wheatstone bridge.
+
+### Chapter 4 Techniques of Circuit Analysis
+This chapter is not that useful give it a brief skim. Future chapters
+will reference some of the terminology within in this chapter so if you
+are confused later, come back to this chapter and give it a skim.
+
+### Chapter 5 The Operational Amplifier
+Read this whole chapter it is extremely important. I also recommend
+breadboarding these circuits as you learn about them. It will make it
+much easier and faster to learn. Op Amps are used all the time for both
+control and measurement.
+
+### Chapter 6 Inductance, Capacitance, and Mutual Inductance
+This is an important chapter, but don't get to caught up in all the
+calculus. Understand the basic results found in section **6.1 The
+Inductor** and **6.2 The Capacitor**. Namely that the inductor's voltage
+depends on the change in current and that capacitor's current depends on
+the change in voltage. Pay attention to equations 6.5 and 6.14.
+The main thing to learn from these equations is that the inductor is a
+device used to remember the current passed through it. Where as the
+capacitor is a device that is used to remember the voltage that passed
+through it. The inductor stores its "memory" in a magnetic field whereas
+the capacitor stores its memory in a electric field.This could be seen
+by how you have the initial current and voltage terms in both equations.
+This topic will get pretty complex so don't stress to much over it, but
+just know that it is used as a basis for control system algorithms for
+example the PID loop.
+This chapter is also important if you want some basic understanding of
+how power supplies work. Mainly section **6.4 Mutual Inductance**. Its a
+lot of math involved and if you're not really working on power supplies
+than it wont be to much use for you. Just know that transformers utilize
+mutual inductance to step up voltage and transformers are one of the
+main components of power supplies. Refer back to section 6.4 if you ever
+find yourself working on power supplies.
+1.  Equation 6.5 Inductor i-v relation
+    [i(t) = frac{1}{L}int^{t}_{t_0}{vdtau} + i(t_0)]
+2.  Equation 6.4 Capacitor v-i relation
+    [v(t) = frac{1}{C}int^{t}_{t_0}{idtau} + v(t_0)]
+
+### Chapter 7 Response of First-Order RL and RC circuits
+This chapter is pretty useful but you don't need to spend to much time
+on it. RL and RC circuits are the basis for different filters and this
+chapter gives you the theory as to why they are. The most vital results
+for this chapter are the time constant derivations for both the RL and
+RC circuits and the step response. If you have access to an oscilloscope
+then you can build the circuit in real life and then see the waveforms
+of the RL and RC circuits.
+
+### Chapter 8 Natural and Step Responses of RLC Circuits
+This chapter is one of the most complicated in the book. You wont often
+use RLC circuits unless you decided to work with radio communications,
+require heavy filtering on a specific frequency, or audio . If any of
+those topics interest you than this chapter is worth a full read
+otherwise just skim it.
+
+### Chapter 9 Sinusoidal Steady-State Analysis
+The main section to focus on this chapter would be ****Section 9.4 The
+Passive Circuit Elements in the Frequency Domain****. This becomes
+useful when your dealing with Laplace and Fourier transforms later on,
+also just gives you an idea of your circuit will react at different
+frequencies. Unless you goal is to work with power supplies and motors
+mainly, I would focus on Section 9.4 solely and skim the rest.
+
+### Chapter 10 Sinusoidal Steady-State Power Calculations
+Most useful section her is ****Section 10.3 The rms Value and Power
+Calculations****, everything else can be skimmed.
+
+### Chapter 11 Balanced Three-Phase Circuits
+Unless you goal is to be a power electronics engineer, this chapter
+should be skipped.
+
+### Chapter 12 Introduction to the Laplace Transform
+This will basically be your introduction into [classical control
+theory](https://en.wikipedia.org/wiki/Classical_control_theory). It will
+seem very random and unrelated to whatever you are doing but it is
+defiantly worth spending some time. If you ever intend to control motors
+or heaters with precision this skill is the fundamental building block
+to do so. Read the whole thing and do some practice problems to check
+yourself.
+
+### Chapter 13 The Laplace Transform in Circuit Analysis
+This chapter details one of the applications of the Laplace transform.
+Also introduces the convolution integral for when your working with
+experimental data. I wouldn't say that this chapter is required, but it
+will give you more practice doing Laplace transforms.
+
+### Chapter 14 Introduction to Frequency Selective Circuits
+Useful chapter, takes all the circuits you seen up to this point and
+shows you how to analyze them as filters. Give it a quick read.
+
+### Chapter 15 Active Filter Circuits
+This is were we start to reach diminishing returns. This chapter is not
+that useful to learn by itself, but if you are really interested in
+audio or radio I would give it a read, otherwise skim it.
+
+### Chapter 16 Fourier Series
+This is an advanced topic but I would give it a read just for the
+purpose of understanding how to read and make a frequency response
+graph. Although you wont do Fourier Series by hand in actual industry
+you will most definitely see frequency response graphs and you may even
+need to implement a Fourier Series algorithm in software so it as least
+useful to know something about it.
+
+### Chapter 17 The Fourier Transform
+If you are going to learn Chapter 16 then you should definitely learn
+this chapter as well.
+
+### Chapter 18 Two-Port Circuits
+I have literally never heard or worked with this topic. Skip.

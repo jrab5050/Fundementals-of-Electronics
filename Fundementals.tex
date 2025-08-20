@@ -1,4 +1,4 @@
-% Created 2025-08-19 Tue 07:50
+% Created 2025-08-20 Wed 07:39
 % Intended LaTeX compiler: pdflatex
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
@@ -28,13 +28,13 @@
 \tableofcontents
 
 \section{Introduction}
-\label{sec:orgd6d825a}
+\label{sec:org10f1be3}
 This a list of topics that every engineer working on electronics should know whether they are
 working on software or hardware. All of these skill transfer over to actual industry jobs only
 difference being that in the industry you will most likely find yourself working with one of these
 specific skills instead of all them as you would in a lab or startup environment.
 \section{Basic Knowledge of Electric Theory}
-\label{sec:org901e593}
+\label{sec:orgc7c480d}
 Learn basic stuff like Ohm's Law, Kirchoff's Current and Voltage laws and Thevian Therom. Learn
 the equations for the fundamental voltage current relationships for the fundamental components of
 electronics: resistor, capacitor and inductor. If you plan on working with motors than a brief skim
@@ -50,7 +50,7 @@ how transistors work and semiconductor theory in general. Best place to start is
 graphs of the diode and transistor. Then pick a textbook about semiconductors and skim it for 3-4
 days until you get a basic grasp of how transistors are fabricated.
 \subsection{Links}
-\label{sec:org199c330}
+\label{sec:orgcdda583}
 \begin{center}
 \begin{tabular}{lll}
 Description & Link & Notes\\
@@ -70,35 +70,35 @@ The Art of Electronics & \url{https://annas-archive.org/md5/ee4f14f89c6d2e0c9369
 \end{tabular}
 \end{center}
 \subsection{Reading Guide for Electric Circuits}
-\label{sec:org0f4d4c6}
+\label{sec:org051e582}
 \subsubsection{Chapter 1 Circuit Variables}
-\label{sec:org6d2a141}
+\label{sec:orgea258d9}
 Skim through most of the chapter but focus on section \textbf{1.4 Voltage and Current},
 \textbf{1.5 The Ideal Basic Circuit Element} and \textbf{1.6 Power and Energy}.
 \subsubsection{Chapter 2 Circuit Elements}
-\label{sec:org4ea9637}
+\label{sec:org14020a1}
 Read this whole chapter, this is very fundamental theory for understanding how circuits work. When
 they talk about Current Sources don't think of it as a component, but as something you would use
 to model a component of off. For example, if I am building a power supply rated for 2 A and I wanted
 to simulate my circuit, I would build the circuit in a simulator and then attach a 2 A current
 source to the output terminals of my power supply. This would show me my circuits behavior at 2 A.
 \subsubsection{Chapter 3 Simple Resistive Circuits}
-\label{sec:org63aa7d4}
+\label{sec:org8d18e11}
 This is another chapter that should be read fully. Pay extra attention to section
 \textbf{3.6 Measuring Resistance-The Wheatstone Bridge}. A lot of temperature sensors are resistance based
 and to measure temperature of them we usually consent them in a Wheatstone bridge.
 \subsubsection{Chapter 4 Techniques of Circuit Analysis}
-\label{sec:orgf13b228}
+\label{sec:orgfd7d4bd}
 This chapter is not that useful give it a brief skim. Future chapters will reference some of the
 terminology within in this chapter so if you are confused later, come back to this chapter and give
 it a skim.
 \subsubsection{Chapter 5 The Operational Amplifier}
-\label{sec:org6c85367}
+\label{sec:orgcc87d87}
 Read this whole chapter it is extremely important. I also recommend breadboarding these circuits as
 you learn about them. It will make it much easier and faster to learn. Op Amps are used all the time
 for both control and measurement.
 \subsubsection{Chapter 6 Inductance, Capacitance, and Mutual Inductance}
-\label{sec:org8fc087c}
+\label{sec:org6590112}
 This is an important chapter, but don't get to caught up in all the calculus. Understand the basic
 results found in section \textbf{6.1 The Inductor} and \textbf{6.2 The Capacitor}. Namely that the inductor's
 voltage depends on the change in current and that capacitor's current depends on the change in
@@ -118,10 +118,68 @@ inductance to step up voltage and transformers are one of the main components of
 Refer back to section 6.4 if you ever find yourself working on power supplies.
 \begin{enumerate}
 \item Equation 6.5 Inductor i-v relation
-\label{sec:orgf465f24}
+\label{sec:orgf969707}
 $$i(t) = \frac{1}{L}\int^{t}_{t_0}{vd\tau} + i(t_0)$$
 \item Equation 6.4 Capacitor v-i relation
-\label{sec:org30046ba}
+\label{sec:org7905d16}
 $$v(t) = \frac{1}{C}\int^{t}_{t_0}{id\tau} + v(t_0)$$
 \end{enumerate}
+\subsubsection{Chapter 7 Response of First-Order RL and RC circuits}
+\label{sec:org064488b}
+This chapter is pretty useful but you don't need to spend to much time on it. RL and RC circuits are
+the basis for different filters and this chapter gives you the theory as to why they are. The most
+vital results for this chapter are the time constant derivations for both the RL and RC circuits and
+the step response. If you have access to an oscilloscope then you can build the circuit in real life
+and then see the waveforms of the RL and RC circuits.
+\subsubsection{Chapter 8 Natural and Step Responses of RLC Circuits}
+\label{sec:orgef6f204}
+This chapter is one of the most complicated in the book. You wont often use RLC circuits unless you
+decided to work with radio communications, require heavy filtering on a specific frequency, or audio
+. If any of those topics interest you than this chapter is worth a full read otherwise just skim it.
+\subsubsection{Chapter 9 Sinusoidal Steady-State Analysis}
+\label{sec:orgf936d3c}
+The main section to focus on this chapter would be \textbf{\textbf{Section 9.4 The Passive Circuit Elements in the
+Frequency Domain}}. This becomes useful when your dealing with Laplace and Fourier transforms later
+on, also just gives you an idea of your circuit will react at different frequencies. Unless you goal
+is to work with power supplies and motors mainly, I would focus on Section 9.4 solely and skim the
+rest.
+\subsubsection{Chapter 10 Sinusoidal Steady-State Power Calculations}
+\label{sec:org269d4bf}
+Most useful section her is \textbf{\textbf{Section 10.3 The rms Value and Power Calculations}}, everything else
+can be skimmed.
+\subsubsection{Chapter 11 Balanced Three-Phase Circuits}
+\label{sec:orgf94f386}
+Unless you goal is to be a power electronics engineer, this chapter should be skipped.
+\subsubsection{Chapter 12 Introduction to the Laplace Transform}
+\label{sec:orgee17a2e}
+This will basically be your introduction into \href{https://en.wikipedia.org/wiki/Classical\_control\_theory}{classical control theory}. It will seem very random and
+unrelated to whatever you are doing but it is defiantly worth spending some time. If you ever intend
+to control motors or heaters with precision this skill is the fundamental building block to do so.
+Read the whole thing and do some practice problems to check yourself.
+\subsubsection{Chapter 13 The Laplace Transform in Circuit Analysis}
+\label{sec:org5d617e0}
+This chapter details one of the applications of the Laplace transform. Also introduces the
+convolution integral for when your working with experimental data. I wouldn't say that this chapter
+is required, but it will give you more practice doing Laplace transforms.
+\subsubsection{Chapter 14 Introduction to Frequency Selective Circuits}
+\label{sec:org2179e4c}
+Useful chapter, takes all the circuits you seen up to this point and shows you how to analyze them
+as filters. Give it a quick read.
+\subsubsection{Chapter 15 Active Filter Circuits}
+\label{sec:org6eb0cc3}
+This is were we start to reach diminishing returns. This chapter is not that useful to learn by
+itself, but if you are really interested in audio or radio I would give it a read, otherwise skim
+it.
+\subsubsection{Chapter 16 Fourier Series}
+\label{sec:orgf821672}
+This is an advanced topic but I would give it a read just for the purpose of understanding how to
+read and make a frequency response graph. Although you wont do Fourier Series by hand in actual
+industry you will most definitely see frequency response graphs and you may even need to implement
+a Fourier Series algorithm in software so it as least useful to know something about it.
+\subsubsection{Chapter 17 The Fourier Transform}
+\label{sec:org1ef4b45}
+If you are going to learn Chapter 16 then you should definitely learn this chapter as well.
+\subsubsection{Chapter 18 Two-Port Circuits}
+\label{sec:org3731eac}
+I have literally never heard or worked with this topic. Skip.
 \end{document}
